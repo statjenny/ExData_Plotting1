@@ -34,7 +34,7 @@ head(data)
 tail(data)
 str(data)
 
-#5 plot3
+#5 plot4
 #Tips: Don't send the plot to screen and then create a png file using dev.copy.This can create anomolies. Create directly using png()
 
 
