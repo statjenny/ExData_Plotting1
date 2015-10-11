@@ -44,7 +44,7 @@ plot2=plot(data$Time, data$Voltage, xlab='datetime', ylab='Voltage', type='l')
 plot3=plot(data$Time, data$Sub_metering_1, ylab='Energy sub metering',type='l', xlab=NA )
 points(data$Time, data$Sub_metering_2, col='red', type='l')
 points(data$Time, data$Sub_metering_3, col='blue', type='l')
-legend('topright', lty=1, col=c('black', 'red', 'blue'), legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'))
+legend('topright', lty=1, col=c('black', 'red', 'blue'), bty='n', legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'))
 
 
 plot4=plot(data$Time, data$Global_reactive_power, xlab='datetime', ylab='Global_reactive_power',type='l')
@@ -53,13 +53,17 @@ png(filename='plot4.png',width=480, height=480)
 
 par(mfrow=c(2,2))
 #plot1
-
+plot1=plot(data$Time, data$Global_active_power, ylab='Global Active Power (kilowatts)',type='l', xlab=NA )
 #plot2
-
+plot2=plot(data$Time, data$Voltage, xlab='datetime', ylab='Voltage', type='l')
 #plot3
+plot3=plot(data$Time, data$Sub_metering_1, ylab='Energy sub metering',type='l', xlab=NA )
+points(data$Time, data$Sub_metering_2, col='red', type='l')
+points(data$Time, data$Sub_metering_3, col='blue', type='l')
+legend('topright', lty=1, col=c('black', 'red', 'blue'), bty='n', legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'))
 
 #plot4
-
+plot4=plot(data$Time, data$Global_reactive_power, xlab='datetime', ylab='Global_reactive_power',type='l')
 
 
 dev.off()
